@@ -6,7 +6,10 @@ class ProductsController < ApplicationController
     # respond_with generates an appropriate
     # response based on the mime-type requested
     # by the client.
-    respond_with Product.all
+    products = Product.all
+    respond_to { |format|
+      format.json { render :json => products.to_json(:include => :reviews) }
+    }
   end
 
   def show

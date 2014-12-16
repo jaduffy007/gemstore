@@ -16,13 +16,13 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Angular gems
 gem 'angular-gem'
-gem 'angularjs-rails-resource', '~> 1.1.1'
+# gem 'angularjs-rails-resource', '~> 1.1.1'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+# gem 'jquery-rails'
 gem 'pry-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

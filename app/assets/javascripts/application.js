@@ -11,5 +11,6 @@
 // about supported directives.
 //
 //= require angular
-//= require angularjs/rails/resource
+//= require angular-route
+//= require app
 //= require_tree .

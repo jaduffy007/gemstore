@@ -15,9 +15,9 @@ p1 = Product.create({name:"Azurite",
   rarity:7,
   color: "#CCC",
   faces:14,
-  images1:"images/gem-02.gif",
-  images2:"images/gem-05.gif",
-  images3:"images/gem-09.gif",})
+  images1:"images/gem-02.jpeg",
+  images2:"images/gem-05.jpeg",
+  images3:"images/gem-09.jpeg",})
 
 p2 = Product.create({name:"Bloodstone",
   description:"Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
@@ -26,9 +26,9 @@ p2 = Product.create({name:"Bloodstone",
   rarity:6,
   color:"#EEE",
   faces:12,
-  images1:"images/gem-01.gif",
-  images2:"images/gem-03.gif",
-  images3:"images/gem-04.gif",})
+  images1:"images/gem-01.jpeg",
+  images2:"images/gem-03.jpeg",
+  images3:"images/gem-04.jpeg",})
 
 p3 = Product.create({name:"Zircon",
   description:"Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
@@ -37,9 +37,9 @@ p3 = Product.create({name:"Zircon",
   rarity:2,
   color:"#000",
   faces:6,
-  images1:"images/gem-06.gif",
-  images2:"images/gem-07.gif",
-  images3:"images/gem-08.gif",})
+  images1:"images/gem-06.jpeg",
+  images2:"images/gem-07.jpeg",
+  images3:"images/gem-08.jpeg",})
 
 r1 = Review.create({stars:5, body:"Great product", author:"james"})
 r2 = Review.create({stars:5, body:"Great product - awesome", author:"markus"})
