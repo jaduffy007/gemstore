@@ -16,7 +16,9 @@ class ReviewsController < ApplicationController
 
   def create
     params.permit!
-    respond_with Review.create(params[:review])
+    @review = Review.create(params[:review])
+    @product = Product.find(params[:product_id])
+    respond_with [@product, @review]
   end
 
   def update
@@ -28,3 +30,4 @@ class ReviewsController < ApplicationController
     respond_with Review.destroy(params[:id])
   end
 end
+

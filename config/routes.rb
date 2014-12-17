@@ -2,28 +2,29 @@ Rails.application.routes.draw do
 
   root to: "gemstore#index"
 
-  resources "products"
-  resources "reviews"
+  resources "products" do
+    resources "reviews"
+  end
 
 
-#         Prefix Verb   URI Pattern                  Controller#Action
-#         root GET    /                            gemstore#index
-#     products GET    /products(.:format)          products#index
-#              POST   /products(.:format)          products#create
-#  new_product GET    /products/new(.:format)      products#new
-# edit_product GET    /products/:id/edit(.:format) products#edit
-#      product GET    /products/:id(.:format)      products#show
-#              PATCH  /products/:id(.:format)      products#update
-#              PUT    /products/:id(.:format)      products#update
-#              DELETE /products/:id(.:format)      products#destroy
-#      reviews GET    /reviews(.:format)           reviews#index
-#              POST   /reviews(.:format)           reviews#create
-#   new_review GET    /reviews/new(.:format)       reviews#new
-#  edit_review GET    /reviews/:id/edit(.:format)  reviews#edit
-#       review GET    /reviews/:id(.:format)       reviews#show
-#              PATCH  /reviews/:id(.:format)       reviews#update
-#              PUT    /reviews/:id(.:format)       reviews#update
-#              DELETE /reviews/:id(.:format)       reviews#destroy
+#              Prefix Verb   URI Pattern                                      Controller#Action
+#                root GET    /                                                gemstore#index
+#     product_reviews GET    /products/:product_id/reviews(.:format)          reviews#index
+#                     POST   /products/:product_id/reviews(.:format)          reviews#create
+#  new_product_review GET    /products/:product_id/reviews/new(.:format)      reviews#new
+# edit_product_review GET    /products/:product_id/reviews/:id/edit(.:format) reviews#edit
+#      product_review GET    /products/:product_id/reviews/:id(.:format)      reviews#show
+#                     PATCH  /products/:product_id/reviews/:id(.:format)      reviews#update
+#                     PUT    /products/:product_id/reviews/:id(.:format)      reviews#update
+#                     DELETE /products/:product_id/reviews/:id(.:format)      reviews#destroy
+#            products GET    /products(.:format)                              products#index
+#                     POST   /products(.:format)                              products#create
+#         new_product GET    /products/new(.:format)                          products#new
+#        edit_product GET    /products/:id/edit(.:format)                     products#edit
+#             product GET    /products/:id(.:format)                          products#show
+#                     PATCH  /products/:id(.:format)                          products#update
+#                     PUT    /products/:id(.:format)                          products#update
+#                     DELETE /products/:id(.:format)                          products#destroy
 
   #resources "users"
 

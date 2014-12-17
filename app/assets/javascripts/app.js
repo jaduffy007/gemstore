@@ -22,19 +22,26 @@ app.config(function($routeProvider, $locationProvider) {
 app.controller('StoreController', [ '$http', function($http){
   var store = this;
   store.products = [];
+  // this.products = [];
+  // window.products = [];
+  // This will log out the window object...hopefully with our products array attached to it
+    // console.log(store);
     $http.get('/products.json').success(function(data){
               store.products = data;
     });
 }]);
 
-app.controller('ReviewController', function() {
+app.controller('ReviewController', ['$http', function($http) {
   this.review = {};
 
   this.addReview = function(product) {
-    product.reviews.push(this.review);
+    var product_id = product.id;
+    this.review.product_id = product.id;
 
-    this.review = {};
-
-    // save to rails
+    $http.post("products/" + product_id + "/reviews.json", {review: this.review }).success(function(data){
+      console.log(data);
+      product.reviews.push(data);
+      this.review = {};
+    });
   };
-});
+}]);
